@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>医療情報時系列可視化アプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='component/fontawesome-free-5.12.0-web/css/all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/prism_entity.css') }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@5.1.2/themes/light.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@5.1.2/themes/light-border.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@5.1.2/themes/material.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@5.1.2/themes/translucent.css">
+</head>
+
+<body>
+<header>
+    <div class="logo"><img src="{{ url_for('static', filename='img/heart.png') }}" height="40px">HeaRT　<span> Health Record Timeliner </span></div>
+
+    <span class="range-value">SCALE</span>
+    <!-- <span class="range-value" id="scale_value"></span> -->
+    <div class="range-box">
+        <input type="range" min="0" max="2" step="1" value="2">
+    </div>
+
+    <div class="input"><a href="#" id="btn_open_input" ><i class="fas fa-edit"></i>INPUT</a></div>
+    <div class="upload"><a href="#" onclick="openDialog('upload');return false;"><i class="fas fa-file-upload"></i>UPLOAD</a></div>
+    <div class="save" id="saveButton"><a href="#"><i class="fas fa-save"></i>SAVE</a></div>
+    <div class="help" id="helpButton"><a href="#" onclick="openDialog('help');return false;"><i class="fas fa-question-circle"></i></a></div>
+    <div class="temp" id="tempButton"><a href="#"><i class="fas fa-flag"></i></a></div>
+
+
+    <style type="text/css">
+        div.bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px; /* この数値は実行時に上書き */
+            margin-right: 2px;
+            background-color: teal;
+        }
+    </style>
+</header>
+<main>
+    <div class="title-col">
+        <div class="title-scroll-wrap">
+            <div class="img_left">
+                <div id="canvasLeft"></div>
+            </div>
+        </div>
+    </div>
+    <!--/title-col-->
+
+    <div class="content-col">
+		<div class="timescale-wrap">
+			<div class="img_top">
+                <div id="canvasTop"></div>
+			</div>
+			<!-- <canvas id="timescale" style="width:100%;height:55px;background-color:#ccc;"></canvas> -->
+        </div>
+        <div class="content-wrap">
+            <div class="main_img_wrapper">
+                <div class="img_main">
+                    <div id="canvasMain"></div>
+
+                </div>
+            </div>
+
+			<!-- <canvas id="content" style="width:3000px;height:400px;background-color:#eee;"></canvas> -->
+			<div class="scroll-bar-horizontal">
+				<div class="scroll-bar-h">
+					<div class="scroll-bar-handle start"></div>
+					<div class="scroll-bar-handle end"></div>
+				</div>
+			</div>
+			<div class="scroll-bar-vertical">
+				<div class="scroll-bar-v">
+					<div class="scroll-bar-handle start"></div>
+					<div class="scroll-bar-handle end"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/content-col-->
+
+    <div class="temporary-col" id="temporary-col"></div>
+
+
+</main>
+<div id="dialog-input" class="dialog" style="display:none;">
+	<div class="box">
+		<div class="close-btn"><a href="#"><i class="far fa-times-circle"></i></a></div>
+		<div class="text">テキストを入力してください</div>
+		<div class="form">
+			<form action="">
+                <label for=""></label><textarea name="" id="in_text" cols="30" rows="10"></textarea>
+                <div class="dct-label"><span class="">文書作成日時</span><input type="date" name="" id="in_dct" ></div>
+
+            </form>
+		</div>
+        <div id="dlg-error-box"></div>
+		<div class="question"><a href="#" class="btn cancel">CANCEL</a><a href="#" class="btn ok text-input-button disabled" id="btn_text_upload">OK</a></div>
+	</div>
+</div>
+<div id="dialog-upload" class="dialog" style="display:none;">
+	<div class="box">
+
+		<div class="close-btn"><a href="#"><i class="far fa-times-circle"></i></a></div>
+		<div class="text">ファイルをアップロードしてください</div>
+		<div class="form upload">
+
+            <a id="file_select_btn"  href="#" class="btn ok text-input-button">ファイルを選択</a>
+
+
+
+            <input type="file" id="send_data" name="send_data" style="display: none;">
+            <span id="file_name"></span>
+		</div>
+		<div class="question" style="display: none;"><a href="#" class="btn cancel">CANCEL</a><a href="#" class="btn ok" id="upload-button">OK</a></div>
+
+    </div>
+</div>
+
+
+<div id="dialog-help" class="dialog" style="display:none;">
+	<div class="box">
+		<div class="close-btn"><a href="#"><i class="far fa-times-circle"></i></a></div>
+		<div class="text">マークの意味</div>
+		<div class="form">
+            <div class="helpmark"><img src="{{ url_for('static', filename='img/negative.svg') }}">　<span>negative</span><br /></div>
+            <div class="helpmark"><img src="{{ url_for('static', filename='img/positive.svg') }}">　<span>positive</span><br /></div>
+            <div class="helpmark"><img src="{{ url_for('static', filename='img/suspicious.svg') }}">　<span>suspicious</span><br /></div>
+            <!-- <div class="helpmark"><img src="{{ url_for('static', filename='img/general.svg') }}">　<span>general</span><br /></div> -->
+            <div class="helpmark"><img src="{{ url_for('static', filename='img/other.svg') }}">　<span>other</span><br /></div>
+            <div class="helpmark"><img src="{{ url_for('static', filename='img/scheduled.svg') }}">　<span>schedule</span><br /></div>
+            <div class="helpmark"><img src="{{ url_for('static', filename='img/executed.svg') }}">　<span>scheduled</span><br /></div>
+            <div class="helpmark"><img src="{{ url_for('static', filename='img/negated.svg') }}">　<span>negated</span><br /></div>
+
+
+		</div>
+        <div class="text">タイムバーの色</div>
+        <div id="timebar">
+        </div>
+
+		<div class="question"><a href="#" class="btn cancel">CLOSE</a></div>
+	</div>
+</div>
+
+<div style="display:none;">
+    <div id="svg_schedule"></div>
+
+</div>
+<div class="loading"><i class="fa fa-spinner fa-spin"></i></div>
+</body>
+
+
+<script src="{{url_for('static', filename='node_modules/jquery/dist/jquery.js')}}" ></script>
+<script src="{{url_for('static', filename='node_modules/popper.js/dist/umd/popper.min.js')}}" ></script>
+<script src="{{url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js')}}" ></script>
+
+
+
+
+  <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"></script>
+	 <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="{{ url_for('static', filename='node_modules/save-svg-as-png/lib/saveSvgAsPng.js') }}"></script>
+<script src="https://unpkg.com/tippy.js@5"></script>
+
+
+<script src="{{ url_for('static', filename='js/utility.js') }}"></script>
+<script src="{{ url_for('static', filename='js/heart.config.js') }}"></script>
+<script src="{{ url_for('static', filename='js/heart.js') }}"></script>
+<script src="{{ url_for('static', filename='js/heart.data.js') }}"></script>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+
+<script>
+var SVGIconList = [
+    {
+        name: "negative",
+        path: "{{ url_for('static', filename='img/negative.svg') }}"
+    },
+    {
+        name: "positive",
+        path: "{{ url_for('static', filename='img/positive.svg') }}"
+    },
+    {
+        name: "suspicious",
+        path: "{{ url_for('static', filename='img/suspicious.svg') }}"
+    },
+    {
+        name: "other",
+        path: "{{ url_for('static', filename='img/other.svg') }}"
+    },
+    {
+        name: "scheduled",
+        path: "{{ url_for('static', filename='img/scheduled.svg') }}"
+    },
+    {
+        name: "executed",
+        path: "{{ url_for('static', filename='img/executed.svg') }}"
+    },
+
+];
+</script>
+<script src="{{url_for('static', filename='js/scroll.js')}}"></script>
+
+</html>

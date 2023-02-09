@@ -1,0 +1,615 @@
+{
+  "entities": [
+    {
+      "id": 7,
+      "tag": "Disease",
+      "text": "異常所見",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "negative",
+      "time": [
+        5,
+        5
+      ],
+      "feature": []
+    },
+    {
+      "id": 6,
+      "tag": "TestTest",
+      "text": "健診",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        5,
+        5
+      ],
+      "feature": []
+    },
+    {
+      "id": 17,
+      "tag": "ClinicalContext",
+      "text": "近医受診",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        14,
+        14
+      ],
+      "feature": []
+    },
+    {
+      "id": 32,
+      "tag": "Disease",
+      "text": "嘔気",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive",
+      "time": [
+        24,
+        24
+      ],
+      "feature": []
+    },
+    {
+      "id": 30,
+      "tag": "MedicineKey",
+      "text": "ＣＤＤＰ",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        24,
+        24
+      ],
+      "feature": []
+    },
+    {
+      "id": 38,
+      "tag": "ClinicalContext",
+      "text": "服薬指導",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        35,
+        35
+      ],
+      "feature": []
+    },
+    {
+      "id": 49,
+      "tag": "Disease",
+      "text": "主病変",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive",
+      "time": [
+        48,
+        48
+      ],
+      "feature": []
+    },
+    {
+      "id": 54,
+      "tag": "MedicineKey",
+      "text": "栄養剤",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        48,
+        48
+      ],
+      "feature": []
+    },
+    {
+      "id": 56,
+      "tag": "Disease",
+      "text": "発熱、骨髄抑制",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive",
+      "time": [
+        55,
+        55
+      ],
+      "feature": []
+    },
+    {
+      "id": 60,
+      "tag": "ClinicalContext",
+      "text": "服薬指導",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        -1,
+        -1
+      ],
+      "feature": []
+    },
+    {
+      "id": 9,
+      "tag": "Disease",
+      "text": "腹満感、食思不振",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive",
+      "time": [
+        8,
+        -1
+      ]
+    },
+    {
+      "id": 11,
+      "tag": "TestKey",
+      "text": "腹囲",
+      "change": [],
+      "region": {},
+      "value": [],
+      "time": [
+        8,
+        -1
+      ]
+    },
+    {
+      "id": 15,
+      "tag": "Disease",
+      "text": "嘔気",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive",
+      "time": [
+        14,
+        -1
+      ]
+    },
+    {
+      "id": 25,
+      "tag": "MedicineKey",
+      "text": "Ｓ－１",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        24,
+        -1
+      ]
+    },
+    {
+      "id": 27,
+      "tag": "MedicineKey",
+      "text": "ＣＤＤＰ",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        24,
+        -1
+      ]
+    },
+    {
+      "id": 33,
+      "tag": "MedicineKey",
+      "text": "５－ＨＴ３容体拮抗薬",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "negated",
+      "time": [
+        24,
+        -1
+      ]
+    },
+    {
+      "id": 34,
+      "tag": "MedicineKey",
+      "text": "インジセトロン",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "scheduled",
+      "time": [
+        35,
+        -1
+      ]
+    },
+    {
+      "id": 44,
+      "tag": "Remedy",
+      "text": "中心静脈栄養法（以下ＴＰＮ）",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        43,
+        -1
+      ]
+    },
+    {
+      "id": 45,
+      "tag": "MedicineKey",
+      "text": "経口栄養剤",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        43,
+        -1
+      ]
+    },
+    {
+      "id": 46,
+      "tag": "MedicineKey",
+      "text": "栄養剤",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        43,
+        -1
+      ]
+    },
+    {
+      "id": 47,
+      "tag": "Remedy",
+      "text": "ＴＰＮ",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed",
+      "time": [
+        43,
+        -1
+      ]
+    },
+    {
+      "id": 57,
+      "tag": "ClinicalContext",
+      "text": "化学療法",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "negated",
+      "time": [
+        55,
+        -1
+      ]
+    }
+  ],
+  "times": [
+    {
+      "id": 5,
+      "text": "２００８年２月",
+      "value": "2008-02-01",
+      "type": "DATE"
+    },
+    {
+      "id": 8,
+      "text": "８月",
+      "value": "2008-08-01",
+      "type": "DATE"
+    },
+    {
+      "id": 14,
+      "text": "９月",
+      "value": "2008-09-01",
+      "type": "DATE"
+    },
+    {
+      "id": 24,
+      "text": "同年９月１７日",
+      "value": "2008-09-17",
+      "type": "DATE"
+    },
+    {
+      "id": 35,
+      "text": "以後",
+      "value": "",
+      "type": "DATE"
+    },
+    {
+      "id": 43,
+      "text": "１０月３日",
+      "value": "2008-10-03",
+      "type": "DATE"
+    },
+    {
+      "id": 48,
+      "text": "その後",
+      "value": "",
+      "type": "DATE"
+    },
+    {
+      "id": 55,
+      "text": "６クール目終了後",
+      "value": "",
+      "type": "CC"
+    },
+    {
+      "id": -1,
+      "text": "DCT",
+      "value": "2008-12-01",
+      "type": "DATE"
+    }
+  ],
+  "anatomy": [],
+  "html": "<div class=\"ner-doc\">【目的】<span id=\"T1\" class=\"disease-general\">進行胃癌</span>の患者に<span id=\"T2\" class=\"remedy-other\">Ｓ－１＋ＣＤＤＰ療法</span>が広く行われているが、支持療法を考慮すると薬剤の種類が多く投与時間が長いため治療イメージが困難であった。<br><span id=\"T3\" class=\"TIMEX3-DATE\">今回</span>、患者の理解を深めるために視覚的に訴える説明シートを作成し、指導を行った。<br>その中で、栄養サポートチーム（以下ＮＳＴ）介入でも関わった一例を報告する。<br>【症例】<span id=\"T4\" class=\"TIMEX3-AGE\">３９歳</span>男性。<br><span id=\"T5\" class=\"TIMEX3-DATE\">２００８年２月</span>の<span id=\"T6\" class=\"testtest-executed\">健診</span>では<span id=\"T7\" class=\"disease-negative\">異常所見</span>はなかった。<br><span id=\"T8\" class=\"TIMEX3-DATE\">８月</span>より<span id=\"T9\" class=\"disease-positive\">腹満感、食思不振</span>が<span id=\"T10\" class=\"change\">出現</span>し<span id=\"T11\" class=\"testkey\">腹囲</span>が<span id=\"T12\" class=\"feature\">急激</span>に<span id=\"T13\" class=\"change\">増大</span>した。<br><span id=\"T14\" class=\"TIMEX3-DATE\">９月</span>に<span id=\"T15\" class=\"disease-positive\">嘔気</span>も<span id=\"T16\" class=\"change\">出現</span>し<span id=\"T17\" class=\"cc-executed\">近医受診</span>したところ、<span id=\"T18\" class=\"testtest-executed\">腹部ＣＴ</span>にて<span id=\"T19\" class=\"disease-positive\">胃癌・癌性腹膜炎</span>と診断され、精査加療目的に<span id=\"T20\" class=\"cc-executed\">当院紹介受診</span>。<br>精査の結果、<span id=\"T21\" class=\"disease-positive\">進行胃癌</span>（<span id=\"T22\" class=\"disease\">Ｔ３Ｎ３Ｍ０</span>，<span id=\"T23\" class=\"feature\">ＣＹ１，ｃＳｔａｇｅＩＶ</span>）の診断を得た。<br>【経過】<span id=\"T24\" class=\"TIMEX3-DATE\">同年９月１７日</span>より<span id=\"T25\" class=\"medkey-executed\">Ｓ－１</span>（<span id=\"T26\" class=\"medval\">８０ｍｇ／㎡</span>）＋<span id=\"T27\" class=\"medkey-executed\">ＣＤＤＰ</span>（<span id=\"T28\" class=\"medval\">６０ｍｇ／㎡</span>）療法を開始した。<br><span id=\"T29\" class=\"TIMEX3-CC\">治療開始当初</span>は<span id=\"T30\" class=\"medkey-executed\">ＣＤＤＰ</span><span id=\"T31\" class=\"TIMEX3-CC\">投与後</span>の<span id=\"T32\" class=\"disease-positive\">嘔気</span>を抑える<span id=\"T33\" class=\"medkey-negated\">５－ＨＴ３容体拮抗薬</span>の処方がなく、内服の<span id=\"T34\" class=\"medkey-scheduled\">インジセトロン</span>を提案し<span id=\"T35\" class=\"TIMEX3-DATE\">以後</span>全ての同治療に追加された。<br>それらをふまえて時間軸に沿って薬剤を表記し、<span id=\"T36\" class=\"medkey-other\">Ｓ－１</span>の<span id=\"T37\" class=\"TIMEX3-DURATION\">２週間</span>の休薬期間や尿量確保の必要性を明確にした説明シートを作成し<span id=\"T38\" class=\"cc-executed\">服薬指導</span>を開始したところ、治療内容についても十分な理解を得ることができ<span id=\"T39\" class=\"cc-executed\">コンプライアンス良好</span>であった。<br><span id=\"T40\" class=\"disease-positive\">食思不振</span>のため<span id=\"T41\" class=\"disease-negative\">経口摂取</span>が<span id=\"T42\" class=\"feature\">少なく</span>、<span id=\"T43\" class=\"TIMEX3-DATE\">１０月３日</span>から<span id=\"T44\" class=\"remedy-executed\">中心静脈栄養法（以下ＴＰＮ）</span>を開始した。<br>ＮＳＴも介入し様々な<span id=\"T45\" class=\"medkey-executed\">経口栄養剤</span>を試した結果、少量で高力ロリー・高タンパクの摂れる<span id=\"T46\" class=\"medkey-executed\">栄養剤</span>（食品）と<span id=\"T47\" class=\"remedy-executed\">ＴＰＮ</span>を並行することとなった。<br><span id=\"T48\" class=\"TIMEX3-DATE\">その後</span>、<span id=\"T49\" class=\"disease-positive\">主病変</span>の<span id=\"T50\" class=\"change\">縮小</span>に伴い<span id=\"T51\" class=\"disease-positive\">食思不振</span>が<span id=\"T52\" class=\"change\">改善</span>され、<span id=\"T53\" class=\"disease-positive\">経口摂取</span>も可能となった。<br>なお自宅でも、ＮＳＴから提案した<span id=\"T54\" class=\"medkey-executed\">栄養剤</span>と食事を摂取していた。<br><span id=\"T55\" class=\"TIMEX3-CC\">６クール目終了後</span>、<span id=\"T56\" class=\"disease-positive\">発熱、骨髄抑制</span>あり<span id=\"T57\" class=\"cc-negated\">化学療法</span>は一旦中止となった。<br>【考察】<span id=\"T58\" class=\"TIMEX3-DATE\">今回</span>作成した<span id=\"T59\" class=\"remedy-other\">Ｓ－１＋ＣＤＤＰ療法</span>の説明シートを用いて<span id=\"T60\" class=\"cc-executed\">服薬指導</span>を行ったことで、<span id=\"T61\" class=\"medkey-other\">Ｓ－１</span>のコンプライアンスを保ち、水分摂取量を確保し<span id=\"T62\" class=\"medkey-other\">ＣＤＤＰ</span>の<span id=\"T63\" class=\"feature\">腎毒性</span>の予防や<span id=\"T64\" class=\"disease-general\">嘔気・嘔吐</span>等の早期対処につながったと考えられる。</div>",
+  "garbage": [
+    {
+      "id": 1,
+      "tag": "Disease",
+      "text": "進行胃癌",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "general"
+    },
+    {
+      "id": 2,
+      "tag": "Remedy",
+      "text": "Ｓ－１＋ＣＤＤＰ療法",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "other"
+    },
+    {
+      "id": 4,
+      "tag": "TIMEX3",
+      "text": "３９歳",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 10,
+      "tag": "Change",
+      "text": "出現",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 12,
+      "tag": "Feature",
+      "text": "急激",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 13,
+      "tag": "Change",
+      "text": "増大",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 16,
+      "tag": "Change",
+      "text": "出現",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 18,
+      "tag": "TestTest",
+      "text": "腹部ＣＴ",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed"
+    },
+    {
+      "id": 19,
+      "tag": "Disease",
+      "text": "胃癌・癌性腹膜炎",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive"
+    },
+    {
+      "id": 20,
+      "tag": "ClinicalContext",
+      "text": "当院紹介受診",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed"
+    },
+    {
+      "id": 21,
+      "tag": "Disease",
+      "text": "進行胃癌",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive"
+    },
+    {
+      "id": 22,
+      "tag": "Disease",
+      "text": "Ｔ３Ｎ３Ｍ０",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 23,
+      "tag": "Feature",
+      "text": "ＣＹ１，ｃＳｔａｇｅＩＶ",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 26,
+      "tag": "MedicineVal",
+      "text": "８０ｍｇ／㎡",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 28,
+      "tag": "MedicineVal",
+      "text": "６０ｍｇ／㎡",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 36,
+      "tag": "MedicineKey",
+      "text": "Ｓ－１",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "other"
+    },
+    {
+      "id": 37,
+      "tag": "TIMEX3",
+      "text": "２週間",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 39,
+      "tag": "ClinicalContext",
+      "text": "コンプライアンス良好",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "executed"
+    },
+    {
+      "id": 40,
+      "tag": "Disease",
+      "text": "食思不振",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive"
+    },
+    {
+      "id": 41,
+      "tag": "Disease",
+      "text": "経口摂取",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "negative"
+    },
+    {
+      "id": 42,
+      "tag": "Feature",
+      "text": "少なく",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 50,
+      "tag": "Change",
+      "text": "縮小",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 51,
+      "tag": "Disease",
+      "text": "食思不振",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive"
+    },
+    {
+      "id": 52,
+      "tag": "Change",
+      "text": "改善",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 53,
+      "tag": "Disease",
+      "text": "経口摂取",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "positive"
+    },
+    {
+      "id": 59,
+      "tag": "Remedy",
+      "text": "Ｓ－１＋ＣＤＤＰ療法",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "other"
+    },
+    {
+      "id": 61,
+      "tag": "MedicineKey",
+      "text": "Ｓ－１",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "other"
+    },
+    {
+      "id": 62,
+      "tag": "MedicineKey",
+      "text": "ＣＤＤＰ",
+      "change": [],
+      "region": {},
+      "value": [],
+      "state": "other"
+    },
+    {
+      "id": 63,
+      "tag": "Feature",
+      "text": "腎毒性",
+      "change": [],
+      "region": {},
+      "value": []
+    },
+    {
+      "id": 64,
+      "tag": "Disease",
+      "text": "嘔気・嘔吐",
+      "change": [],
+      "region": {},
+      "value": [],
+      "certainty": "general"
+    }
+  ]
+}

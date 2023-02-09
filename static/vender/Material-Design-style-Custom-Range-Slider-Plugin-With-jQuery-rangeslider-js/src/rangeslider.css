@@ -1,0 +1,35 @@
+div.rangeslider {
+    box-sizing:content-box;
+    position:relative;
+}
+div.rangeslider *{
+    box-sizing:content-box;
+}
+div.rangeslider div {
+    position:absolute;
+}
+div.rangeslider .rangeouter {
+    background:#ddd;
+    width:100%;
+}
+div.rangeslider .rangeinner {
+    background:#04B404;
+}
+div.rangeslider .rangeselector {
+    background:#04B404;
+    background-clip:padding-box;
+    border:0.4em solid rgba(0, 0, 0, 0);
+}
+
+div.rangeslider.disabled .rangeinner, div.rangeslider.disabled .rangeselector {
+    background-color:#777!important;
+}
+
+/* Colour Animations */
+div.rangeslider .rangeouter, div.rangeslider .rangeinner, div.rangeslider .rangeselector {
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}

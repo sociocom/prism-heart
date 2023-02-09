@@ -1,0 +1,20 @@
+{
+  "name": "heart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.5.3",
+    "d3": "^6.2.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "save-svg-as-png": "^1.4.17",
+    "tippy.js": "^6.2.7"
+  }
+}

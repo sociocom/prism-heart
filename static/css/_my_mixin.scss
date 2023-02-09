@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@mixin fz($size, $base: 10) {
+ font-size: $size + px;
+ font-size: ($size / $base) + rem;
+}
+
+@mixin gradient($start:#fff, $end:#ccc) {
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $start), color-stop(100%, $end));
+	background-image: -moz-linear-gradient($start, $end);
+	background-image: -webkit-linear-gradient($start, $end);
+	background-image: linear-gradient($start, $end);
+}
+
+@mixin clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+
+

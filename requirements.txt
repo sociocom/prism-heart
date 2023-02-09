@@ -1,0 +1,4 @@
+Flask
+cairosvg
+flask-cors
+requests

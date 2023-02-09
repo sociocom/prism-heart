@@ -1,0 +1,88 @@
+body{
+    min-width: 500px;
+}
+
+.logo span{
+    font-size: 20px;
+    letter-spacing:1px;
+    font-style: normal;
+}
+/* 横幅が 767px 以下であれば */
+@media (max-width:700px) {
+    .logo span{
+        display: none;
+    }
+}
+
+
+
+@media (min-width: 800px) {
+   /* 横幅が800px以上の場合に適用するスタイル */
+   div#sidebar { width: 240px }
+}
+
+#send_data{
+    line-height: 40px;
+}
+
+
+.btn-square-little-rich {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #7B82BD;/*色*/
+  border: solid 1px #7B82BD;/*線色*/
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.btn-square-little-rich:active {
+  /*押したとき*/
+  border: solid 1px #7B82BD;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+
+
+#file_name{
+    margin-left: 20px;
+}
+.dct-label{
+    margin-top: 20px;
+}
+.dct-label span{
+
+    font-size:110% ;
+    font-weight: normal;
+}
+
+.loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(64, 64, 64, 0.8) url(../img/loading.svg) center center/128px 128px no-repeat;
+    transition: all 0.2s ease-in;
+}
+
+
+
+#dlg-error-box{
+    color:red;
+    font-weight: normal;
+    width:500px;
+    height:100%;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+#btn_text_upload.disabled{
+    background: #ccc;
+
+}
