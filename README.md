@@ -8,7 +8,13 @@
 
 ## Docker での起動
 
-Docker 環境があれば，`./Dockerfile` から HeaRT のコンテナを構築し，アプリを起動できます．
+Docker Compose 環境があればローカルで直ちにアプリを起動できます．
+
+`$ sudo docker compose up`
+
+以下にブラウザでアクセスします．
+
+`http://localhost:8080/prism-heart`
 
 ## 手動インストール
 
@@ -33,14 +39,14 @@ npm install
 
 ### python の仮想環境をインストール
 
-以下のようなコマンドで　入っている python のバージョンをチェックします。  
+以下のようなコマンドで入っている python のバージョンをチェックします。  
 環境に合わせて実施してください。
 
 ```
 python3.8 -version
 ```
 
-なるべく　 python3.8 以上を使用してください。(python3.6 でも動作するとは思います。)
+なるべく python3.8 以上を使用してください。(python3.6 でも動作するとは思います。)
 
 もし、入っていない場合は、インストールします。
 
@@ -60,9 +66,9 @@ source ./myvenv/bin/activate
 
 python の仮想環境に入ると
 
-(myvenv)　のような文字がプロンプトの前に表示されます。
+(myvenv) のような文字がプロンプトの前に表示されます。
 
-ソースの　 requirements.txt 　がある位置までフォルダを移動して　ライブラリのインストール
+ソースの requirements.txt がある位置までフォルダを移動して ライブラリのインストール
 
 ```
 pip install --upgrade pip
@@ -94,13 +100,13 @@ data フォルダに動作を確認している json が入っています。
 下記の部分で，最初に本アプリを開いた時に表示される時系列を変更できます
 
 ```
-//　コメントアウトにすると正気状態では空でスタート
+// コメントアウトにすると正気状態では空でスタート
 var InitalFileJson="sample_input-3.json";
 ```
 
-色等も　 heart.config.js 　で変更します。
+色等も heart.config.js で変更します。
 
-API の URL は　 app.py の 15 行目あたりで指定しています。
+API の URL は app.py の 15 行目あたりで指定しています。
 
 ```
 API_URL = 'https://aoi.naist.jp/heart-api'
@@ -118,3 +124,11 @@ UPLOAD_FOLDER = './uploads'
 - `static/js/heart.js`
   - upload 処理のリンク先 `/upload` を修正する（例: `http://hostname.org/subpath` にこのアプリをデプロイしている場合， `/subpath/upload` にする必要がある）
   - input 処理 `/heart-api` を JaMIE の URL（上記 API_URL と同じもの）に変える
+
+## 開発者
+
+[株式会社シルク・ラボラトリ](https://www.silk.co.jp/)
+
+## ライセンス
+
+MIT

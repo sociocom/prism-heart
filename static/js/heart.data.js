@@ -101,7 +101,7 @@ class HeartData {
         }
 
 
-        //以前より　の表示に使用する
+        //以前より の表示に使用する
         this.beforeTimeSpanDay = 10;
 
 
@@ -118,7 +118,7 @@ class HeartData {
             this.timeLine.push({id: item.id, unixtimestamp: item.unixtimestamp, category: "org", text: item.text});
             this.timeLine.push({id: item.id, unixtimestamp: item.unixtimestamp + 3600 * 24, category: "nextday", text: ""});
 
-            //以前より　を入れておく
+            //以前より を入れておく
             this.timeLine.push({id: item.id, unixtimestamp: item.unixtimestamp - 3600 * 24 * 10000 * this.beforeTimeSpanDay, category: "before", text: ""});
 
             if (lastUnixtimestamp < item.unixtimestamp) {

@@ -2,7 +2,7 @@
 
 
 //初期json ファイル
-//　コメントアウトにすると正気状態では空でスタート
+// コメントアウトにすると正気状態では空でスタート
 var InitalFileJson="JP0133-1.json";
 
 var TagNameList= [
@@ -50,7 +50,7 @@ var HeartConfig0 = {
     //縦高さの基本
     BaseH: 50,
 
-    //左ラベルの幅　左余白
+    //左ラベルの幅 左余白
     LabelLeftM: 80,
 
 
@@ -116,7 +116,7 @@ var HeartConfig0 = {
 var HeartConfig1 = {
     BaseH: 50,
 
-    //左ラベルの幅　左余白
+    //左ラベルの幅 左余白
     LabelLeftM: 20,
 
 
@@ -175,7 +175,7 @@ var HeartConfig1 = {
 var HeartConfig2 = {
     BaseH: 50,
 
-    //左ラベルの幅　左余白
+    //左ラベルの幅 左余白
     LabelLeftM: 20,
 
 

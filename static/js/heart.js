@@ -204,7 +204,7 @@ function getFile() {
 
 
 function openDialog(type) {
-    //jquery の　on click イベントだと　URLに# がつく
+    //jquery の on click イベントだと URLに# がつく
     // return false すると、イベントが伝搬しない
 
 
@@ -769,7 +769,7 @@ function drawLabel(svg, width, includeTimeHeight) {
 
             if (a.treeIndex > 0) {
                 for(let i=0;i<a.treeIndex;i++){
-                    text+="　";
+                    text+=" ";
                 }
                 text += "┗ " + text1;
             }
